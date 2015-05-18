@@ -1,0 +1,135 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<script src="js/Producto.js"></script>
+	<script src="js/ProductoUtil.js"></script>
+	<script>
+		var productoUtil = new ProductoUtil();
+
+		var initProductoUtil = function() {
+			productoUtil.agregar(new Producto("Cámara", 200));
+			productoUtil.agregar(new Producto("TV", 700));
+			productoUtil.agregar(new Producto("DVD", 300));
+		};
+
+		var imprimirTabla = function() {
+			var productos = productoUtil.obtenerTodos();
+			var tbody = document.getElementById("tbody-tabla-productos");
+			
+			var html = "";	
+			for (var i in productos) {
+				var p = productos[i];
+
+				html += "<tr>" + 
+					"<td>" + p.getId() + "</td>" + 
+					"<td>" + p.getNombre() + "</td>" + 
+					"<td>" + p.getPrecio() + "</td>" + 
+					"<td><a href=''>mostrar</a></td>" +
+					"<td><a href=''>mostrar</a></td>" +
+					"</tr>";
+			}
+
+			tbody.innerHTML = html;
+
+		};
+
+		var guardar = function() {
+			var nombre = document.getElementById("nombre").value;
+			var precio = document.getElementById("precio").value;
+
+			// TODO Mejorar validaciones
+			if (nombre && precio) {
+				productoUtil.agregar(new Producto(nombre, precio));
+				limpiarForm();
+				imprimirTabla();
+			}
+		};
+	
+		var limpiarForm = function() {
+			document.getElementById("nombre").value = "";
+			document.getElementById("precio").value = "";
+		};
+
+		var init = function() {
+			initProductoUtil();
+			imprimirTabla();
+		};
+	</script>
+	<style>
+		/* Selector de Elemento */
+		h1 {
+			text-align: center;
+		}
+
+		/* Selectores de clase */
+		.tabla-centrada {
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		.tabla-datos th {
+			background-color: gray;
+		}
+
+		.tabla-datos tr:nth-child(odd) td {
+			background-color: lightgray;
+		}
+
+		.tabla-datos tr:nth-child(even) td {
+			background-color: darkgray;
+		}
+
+		/* Selectores de id y pseudo-elementos */
+		#form-producto td:last-child {
+			text-align: center;
+		}
+
+		#tabla-productos td:nth-child(3),
+		#tabla-productos td:nth-child(4),
+		#tabla-productos td:nth-child(5) {
+			text-align: center;
+		}
+
+		#tabla-productos a {
+			color: black;
+		}
+	</style>	
+</head>
+<body onload="init()">
+	<h1>Productos</h1>
+	<table id="form-producto" class="tabla-centrada">
+		<tr>
+			<td>Nombre:</td>
+			<td><input type="text" id="nombre"></td>
+		</tr>
+		<tr>
+			<td>Precio:</td>
+			<td><input type="text" id="precio"></td>
+		</tr>
+		<tr>
+			<td colspan="2">				
+				<input type="button" value="Guardar" onclick="guardar()">
+			</td>
+		</tr>
+	</table>
+	<br>
+	<table id="tabla-productos" class="tabla-centrada tabla-datos">
+		<thead>
+			<tr>
+				<th>Id</th>
+				<th>Nombre</th>
+				<th>Precio</th>
+				<th>Mostrar</th>
+				<th>Eliminar</th>
+			</tr>
+		</thead>	
+		<tbody id="tbody-tabla-productos">
+		</tbody>
+	</table>
+</body>
+</html>
+
+
+
+
+
