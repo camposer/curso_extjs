@@ -1,10 +1,20 @@
-1.- Cree una clase Producto (¿id?, nombre, precio, cantidad) 
-2.- Cree una clase ProductoUtil que ofrezca las 4 operaciones CRUD (Create-Update-Read-Delete) sobre Producto: agregar, modificar, eliminar, obtener y obtenerTodos. Probar! 
+1.- Crear una interfaz que permita gestionar Productos (CRUD+) para que funcione únicamente con JavaScript, utilizando la clase ProductoUtil (creada en el ejercicio anterior). Los objetos dinámicos deben ser mostrados en pantalla con DOM.
 
-	Pista:
-		function ProductoUtil() {
-			var productos;
+Orden sugerido de trabajo:
+- Listar productos (obtenerTodos)
+- Agregar
+- Eliminar
+- Mostrar
+- Modificar
 
-			this.obtenerProductos = function() { return productos; };
-			// ...
-		}
+2.- Modifique la clase ProductoUtil y producto.html para que funcione con objetos simples (JSON).
+Pista: quitar el archivo producto.js
+
+Ya no son así: 
+var p = new Producto(tal, tal);
+
+Ahora son así:
+var p = {
+	nombre: tal,
+	precio: tal
+};

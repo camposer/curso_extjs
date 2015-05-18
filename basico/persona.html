@@ -1,0 +1,48 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script>
+			function Persona(_nombre, _apellido) {
+				var id;
+				var nombre = _nombre;
+				var apellido = _apellido;
+				var edad = null;
+				
+				this.setId = function(i) { 
+					id = i; 
+				};
+				this.getId = function() { return id; };
+				this.setNombre = function(n) { nombre = n; };
+				this.getNombre = function() { return nombre; };
+				this.setApellido = function(a) { apellido = a; };
+				this.getApellido = function() { return apellido; };
+				this.setEdad = function(e) { edad = e; };
+				this.getEdad = function() { return edad; };
+
+				this.toString = function() {
+					return "[ id = " + id +
+						", nombre = " + this.getNombre() +
+						", apellido = " + apellido + 
+						", edad = " + edad + " ]";
+				};
+			}
+
+			var p1 = new Persona("Juan", "Pérez");
+			p1.setEdad(20);
+			var p2 = new Persona("María", "García");
+
+			var personas = [ p1, p2, new Persona("Pedro", "López") ];
+			p2.setEdad(30);
+			for (var i in personas) 
+				document.writeln(personas[i] + "<br>");
+		</script>		
+	</head>
+	<body>
+
+	</body>
+</html>
+
+
+
+
+

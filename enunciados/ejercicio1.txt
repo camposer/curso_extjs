@@ -1,21 +1,10 @@
-Implementar una función JS que muestre en pantalla el siguiente resultado (identificar el patrón):
+1.- Cree una clase Producto (¿id?, nombre, precio, cantidad) 
+2.- Cree una clase ProductoUtil que ofrezca las 4 operaciones CRUD (Create-Update-Read-Delete) sobre Producto: agregar, modificar, eliminar, obtener y obtenerTodos. Probar! 
 
-1. 
-2. 
-3. foo
-4. 
-5. bar
-6. foo
-7. baz
-8. 
-9. foo
-10. bar
-11. 
-12. foo
-13. 
-14. baz
-15. foo bar
-16. 
-17. 
+	Pista:
+		function ProductoUtil() {
+			var productos;
 
-
+			this.obtenerProductos = function() { return productos; };
+			// ...
+		}

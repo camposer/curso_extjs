@@ -1,0 +1,44 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script>
+			function Persona() {
+				this.respirar = function() {
+					document.writeln("Estoy respirando...<br>");
+				};
+			}
+
+			var midormir = function() {
+				document.writeln("Estoy durmiendo...<br>");
+			};
+
+			var p1 = new Persona();
+			p1.respirar();
+			p1.comer = function() {
+				document.writeln("Estoy comiendo...<br>");
+			};
+			p1.comer();
+			
+			Persona.prototype.caminar = function() {
+				document.writeln("Estoy caminando...<br>");
+			};
+			p1.caminar();
+
+			var p2 = new Persona();
+			p2.respirar();
+			p2.dormir = midormir;
+			p2.dormir();
+			/// p2.comer(); // falla!
+			p2.caminar();
+	
+		</script>		
+	</head>
+	<body>
+
+	</body>
+</html>
+
+
+
+
+
