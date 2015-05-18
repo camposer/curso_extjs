@@ -24,8 +24,8 @@
 					"<td>" + p.getId() + "</td>" + 
 					"<td>" + p.getNombre() + "</td>" + 
 					"<td>" + p.getPrecio() + "</td>" + 
-					"<td><a href=''>mostrar</a></td>" +
-					"<td><a href=''>mostrar</a></td>" +
+					"<td><a href='javascript:mostrar(" + p.getId() + ")'>mostrar</a></td>" +
+					"<td><a href='javascript:eliminar(" + p.getId() + ")'>eliminar</a></td>" +
 					"</tr>";
 			}
 
@@ -33,19 +33,39 @@
 
 		};
 
+		var mostrar = function(id) {
+			var p = productoUtil.obtener(id);
+			document.getElementById("productoId").value = p.getId();
+			document.getElementById("nombre").value = p.getNombre();
+			document.getElementById("precio").value = p.getPrecio();
+		};
+
+		var eliminar = function(id) {
+			productoUtil.eliminar(id);
+			imprimirTabla();
+		};
+
 		var guardar = function() {
+			var id = document.getElementById("productoId").value;
 			var nombre = document.getElementById("nombre").value;
 			var precio = document.getElementById("precio").value;
 
 			// TODO Mejorar validaciones
 			if (nombre && precio) {
-				productoUtil.agregar(new Producto(nombre, precio));
+				var p = new Producto(nombre, precio);
+				if (id) {
+					p.setId(id);
+					productoUtil.modificar(p);
+				} else {
+					productoUtil.agregar(p);
+				}
 				limpiarForm();
 				imprimirTabla();
 			}
 		};
 	
 		var limpiarForm = function() {
+			document.getElementById("productoId").value = "";
 			document.getElementById("nombre").value = "";
 			document.getElementById("precio").value = "";
 		};
@@ -97,6 +117,7 @@
 </head>
 <body onload="init()">
 	<h1>Productos</h1>
+	<input type="hidden" id="productoId">
 	<table id="form-producto" class="tabla-centrada">
 		<tr>
 			<td>Nombre:</td>
