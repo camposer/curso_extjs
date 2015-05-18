@@ -1,0 +1,10 @@
+1.- Cree una clase Producto (¿id?, nombre, precio, cantidad) 
+2.- Cree una clase ProductoUtil que ofrezca las 4 operaciones CRUD (Create-Update-Read-Delete) sobre Producto: agregar, modificar, eliminar, obtener y obtenerTodos. Probar! 
+
+	Pista:
+		function ProductoUtil() {
+			var productos;
+
+			this.obtenerProductos = function() { return productos; };
+			// ...
+		}

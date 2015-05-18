@@ -1,0 +1,46 @@
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script>
+			var a = 2;
+			var b = 2;
+			var mensaje = 'Hola';
+
+			function holaMundo(nombre) {
+				document.writeln(mensaje + ' ' + nombre + '<br>');
+			}
+
+			holaMundo('Pedro');
+
+			var sumar = function(a, b) {
+				return a + b;
+			};
+			
+			document.writeln(a + " + " + b + " = " + sumar(a, b) + "<br>");
+
+			var numeros = [ "uno", "dos", "tres" ];
+			
+			for (var i in numeros) {
+				document.writeln(numeros[i] + '<br>');
+			}
+
+			for (var i = 0; i < numeros.length; i++) 
+				document.writeln(numeros[i] + '<br>');
+
+			var i = 0;
+			for (; ;)  {
+				if (i == numeros.length)
+					break;
+				document.writeln(numeros[i++] + '<br>');
+			}
+		</script>		
+	</head>
+	<body>
+
+	</body>
+</html>
+
+
+
+
+

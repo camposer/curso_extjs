@@ -1,0 +1,20 @@
+1.- Crear una interfaz que permita gestionar Productos (CRUD+) para que funcione únicamente con JavaScript, utilizando la clase ProductoUtil (creada en el ejercicio anterior). Los objetos dinámicos deben ser mostrados en pantalla con DOM.
+
+Orden sugerido de trabajo:
+- Listar productos (obtenerTodos)
+- Agregar
+- Eliminar
+- Mostrar
+- Modificar
+
+2.- Modifique la clase ProductoUtil y producto.html para que funcione con objetos simples (JSON).
+Pista: quitar el archivo producto.js
+
+Ya no son así: 
+var p = new Producto(tal, tal);
+
+Ahora son así:
+var p = {
+	nombre: tal,
+	precio: tal
+};
