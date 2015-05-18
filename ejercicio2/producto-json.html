@@ -1,0 +1,162 @@
+<html>
+<head>
+	<meta charset="utf-8">
+	<script src="js/ProductoUtil-json.js"></script>
+	<script>
+		var productoUtil = new ProductoUtil();
+
+		var initProductoUtil = function() {
+			var p = {
+				nombre: "Cámara", 
+				precio: 200
+			};
+			productoUtil.agregar(p);
+			productoUtil.agregar({ nombre: "TV", precio: 700 });
+			productoUtil.agregar({ nombre: "DVD", precio: 300 });
+		};
+
+		var imprimirTabla = function() {
+			var productos = productoUtil.obtenerTodos();
+			var tbody = document.getElementById("tbody-tabla-productos");
+			
+			var html = "";	
+			for (var i in productos) {
+				var p = productos[i];
+
+				html += "<tr>" + 
+					"<td>" + p.id + "</td>" + 
+					"<td>" + p["nombre"] + "</td>" + 
+					"<td>" + p.precio + "</td>" + 
+					"<td><a href='javascript:mostrar(" + p.id + ")'>mostrar</a></td>" +
+					"<td><a href='javascript:eliminar(" + p.id + ")'>eliminar</a></td>" +
+					"</tr>";
+			}
+
+			tbody.innerHTML = html;
+
+		};
+
+		var mostrar = function(id) {
+			var p = productoUtil.obtener(id);
+			document.getElementById("productoId").value = p.id;
+			document.getElementById("nombre").value = p.nombre;
+			document.getElementById("precio").value = p.precio;
+		};
+
+		var eliminar = function(id) {
+			productoUtil.eliminar(id);
+			imprimirTabla();
+		};
+
+		var guardar = function() {
+			var id = document.getElementById("productoId").value;
+			var nombre = document.getElementById("nombre").value;
+			var precio = document.getElementById("precio").value;
+
+			// TODO Mejorar validaciones
+			if (nombre && precio) {
+				var p = {
+					nombre: nombre,
+					precio: precio
+				};
+				if (id) {
+					p.id = id;
+					productoUtil.modificar(p);
+				} else {
+					productoUtil.agregar(p);
+				}
+				limpiarForm();
+				imprimirTabla();
+			}
+		};
+	
+		var limpiarForm = function() {
+			document.getElementById("productoId").value = "";
+			document.getElementById("nombre").value = "";
+			document.getElementById("precio").value = "";
+		};
+
+		var init = function() {
+			initProductoUtil();
+			imprimirTabla();
+		};
+	</script>
+	<style>
+		/* Selector de Elemento */
+		h1 {
+			text-align: center;
+		}
+
+		/* Selectores de clase */
+		.tabla-centrada {
+			margin-left: auto;
+			margin-right: auto;
+		}
+
+		.tabla-datos th {
+			background-color: gray;
+		}
+
+		.tabla-datos tr:nth-child(odd) td {
+			background-color: lightgray;
+		}
+
+		.tabla-datos tr:nth-child(even) td {
+			background-color: darkgray;
+		}
+
+		/* Selectores de id y pseudo-elementos */
+		#form-producto td:last-child {
+			text-align: center;
+		}
+
+		#tabla-productos td:nth-child(3),
+		#tabla-productos td:nth-child(4),
+		#tabla-productos td:nth-child(5) {
+			text-align: center;
+		}
+
+		#tabla-productos a {
+			color: black;
+		}
+	</style>	
+</head>
+<body onload="init()">
+	<h1>Productos</h1>
+	<input type="hidden" id="productoId">
+	<table id="form-producto" class="tabla-centrada">
+		<tr>
+			<td>Nombre:</td>
+			<td><input type="text" id="nombre"></td>
+		</tr>
+		<tr>
+			<td>Precio:</td>
+			<td><input type="text" id="precio"></td>
+		</tr>
+		<tr>
+			<td colspan="2">				
+				<input type="button" value="Guardar" onclick="guardar()">
+			</td>
+		</tr>
+	</table>
+	<br>
+	<table id="tabla-productos" class="tabla-centrada tabla-datos">
+		<thead>
+			<tr>
+				<th>Id</th>
+				<th>Nombre</th>
+				<th>Precio</th>
+				<th>Mostrar</th>
+				<th>Eliminar</th>
+			</tr>
+		</thead>	
+		<tbody id="tbody-tabla-productos">
+		</tbody>
+	</table>
+</body>
+</html>
+
+
+
+
+

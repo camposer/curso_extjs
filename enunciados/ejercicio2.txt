@@ -18,3 +18,6 @@ var p = {
 	nombre: tal,
 	precio: tal
 };
+window.alert(p.nombre) // => tal
+window.alert(p["nombre"]) // => tal
+
