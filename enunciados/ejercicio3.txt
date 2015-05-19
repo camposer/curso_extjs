@@ -1,13 +1,13 @@
-Ejercicio 4
+Ejercicio 3
 ===========
 
 PARTE 1
 -------
 
-1.- Refactorizar el código de producto.html para que ahora utilice la API Rest de /productos
+1.- Refactorizar el código de producto-jquery.html (Ejercicio 2) para que ahora utilice la API Rest de /productos
 NOTA:
 - Los ficheros producto.html y sus JS deberá copiarlos dentro de la carpeta public/producto del ejercicio3
-- Cambiar el nombre de producto.html a index.html
+- Cambiar el nombre de producto-jquery.html a index.html
 - Para ejecutar el proyecto ahora deberá introducir en el navegador:
 	http://localhost:3000/producto
 
