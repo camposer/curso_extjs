@@ -1,6 +1,19 @@
 Ejercicio 4
 ===========
 
+PARTE 1
+-------
+
+1.- Refactorizar el código de producto.html para que ahora utilice la API Rest de /productos
+NOTA:
+- Los ficheros producto.html y sus JS deberá copiarlos dentro de la carpeta public/producto del ejercicio3
+- Cambiar el nombre de producto.html a index.html
+- Para ejecutar el proyecto ahora deberá introducir en el navegador:
+	http://localhost:3000/producto
+
+PARTE 2
+-------
+
 0.- Ver ejercicio account_manager (ejecutar, probar)
 
 1.- Refactorizar el código de am (Account Manager) que seguimos con el tutorial de Ext JS para que ahora haga las operaciones de Actualización (U) y Lectura (R) de Productos (utilizando el proxy REST).
