@@ -43,6 +43,9 @@ Ext.define('Tienda.controller.Productos', {
 	        record = form.getRecord(), 
 	        values = form.getValues(); 
 
+        if (!form.isValid()) // Si es inválido no sigue adelante
+            return;
+
         if (record) { // modificando
             record.set(values);
         } else { // agregando

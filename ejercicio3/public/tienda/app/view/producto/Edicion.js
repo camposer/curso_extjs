@@ -20,10 +20,17 @@ Ext.define('Tienda.view.producto.Edicion', {
                     {
                         xtype: 'textfield',
                         name : 'nombre',
-                        fieldLabel: 'Nombre'
+                        fieldLabel: 'Nombre',
+                        allowBlank: false,
+                        //minLength: 3,
+                        regex: /[0-9a-zA-Z ]{3,}/,
+                        maskRe: /[0-9a-zA-Z ]/,
+                        invalidText: 'Nombre inválido'
                     },
                     {
                         xtype: 'numberfield',
+                        vtype: 'precio',
+                        allowBlank: false,
                         name : 'precio',
                         fieldLabel: 'Precio'
                     }

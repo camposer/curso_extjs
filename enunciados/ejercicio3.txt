@@ -27,6 +27,7 @@ Ver: Guides -> Component -> The Form Package
 ---
 
 4.- Crear la tienda. Ahora debe agregar las pantallas Inicio y Carrito, además del CRUD de producto que ya hicimos en el ejercicio anterior. Ver abajo:
+Ver: Guides -> Layout Managers -> Layout Browser
 
 4.1.- Crear una nueva vista principal con Layout (Card) y dentro de esta agregar las otras vistas, a saber: Inicio, Carrito y CRUD (listaproductos y edicionproducto). Para mantener el código simple puede mantener un sólo controlador
 
