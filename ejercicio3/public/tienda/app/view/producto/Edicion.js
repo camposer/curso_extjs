@@ -23,8 +23,8 @@ Ext.define('Tienda.view.producto.Edicion', {
                         fieldLabel: 'Nombre',
                         allowBlank: false,
                         //minLength: 3,
-                        regex: /[0-9a-zA-Z ]{3,}/,
-                        maskRe: /[0-9a-zA-Z ]/,
+                        regex: /^...+$/,
+                        maskRe: /[0-9a-z ]/i,
                         invalidText: 'Nombre inválido'
                     },
                     {
