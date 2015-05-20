@@ -1,6 +1,6 @@
 Ext.define('Tienda.view.producto.Lista' ,{
     extend: 'Ext.grid.Panel', 
-    alias: 'widget.listaproductos', 
+    alias: 'widget.productoLista', 
 
     store: 'Productos',
     title: 'Productos',

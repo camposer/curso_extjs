@@ -1,6 +1,6 @@
 Ext.define('Tienda.view.producto.Edicion', {
     extend: 'Ext.window.Window', 
-    alias: 'widget.edicionproducto',
+    alias: 'widget.productoEdicion',
 
     title: 'Editar producto',
     layout: 'fit',

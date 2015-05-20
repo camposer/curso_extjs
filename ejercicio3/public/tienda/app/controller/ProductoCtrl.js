@@ -1,4 +1,4 @@
-Ext.define('Tienda.controller.Productos', {
+Ext.define('Tienda.controller.ProductoCtrl', {
     extend: 'Ext.app.Controller',
 
     views: [ 
@@ -10,29 +10,29 @@ Ext.define('Tienda.controller.Productos', {
 
     init: function() {
         this.control({ 
-            'listaproductos': {
+            'productoLista': {
                 itemdblclick: this.editarProducto
             },
-            'edicionproducto button[action=guardar]': {
+            'productoEdicion button[action=guardar]': {
                 click: this.guardarProducto
             },    
-            'listaproductos button[action=eliminar]': {
+            'productoLista button[action=eliminar]': {
                 click: this.eliminarProducto
             },
-            'listaproductos button[action=agregar]': {
+            'productoLista button[action=agregar]': {
                 click: this.agregarProducto
             }
         });        
     },
 
     editarProducto: function(grid, record) {
-        var view = Ext.widget('edicionproducto'); 
+        var view = Ext.widget('productoEdicion'); 
 
         view.down('form').loadRecord(record);
     },
 
     agregarProducto: function(grid, record) {
-        var view = Ext.widget('edicionproducto');
+        var view = Ext.widget('productoEdicion');
         view.setTitle('Agregar producto');
         //view.title = 'Agregar producto'; // no funciona porque es un config!
     },
@@ -67,7 +67,7 @@ Ext.define('Tienda.controller.Productos', {
 	},
 
     eliminarProducto: function(button) {
-        var grid    = button.up('listaproductos'),
+        var grid    = button.up('productoLista'),
             records = grid.getSelectionModel().getSelection();
 
         this.getProductosStore().remove(records);

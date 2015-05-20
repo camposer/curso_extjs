@@ -14,7 +14,8 @@ Ext.application({
 
     appFolder: 'app', 
     controllers: [ 
-        'Productos' 
+        'ProductoCtrl',
+        'PrincipalCtrl'
     ],
 
     launch: function() { 
@@ -22,7 +23,26 @@ Ext.application({
             layout: 'fit',
             items: [
                 {
-                    xtype: 'listaproductos' 
+                    xtype: 'panel',
+                    layout: 'border',
+                    items: [
+                        {
+                            html: 'Cabecera',
+                            region: 'north'
+                        },
+                        {
+                            html: 'Menú',
+                            region: 'west'
+                        },
+                        {
+                            xtype: 'principalMarco',
+                            region: 'center'
+                        },
+                        {
+                            html: 'Pie',
+                            region: 'south'
+                        }
+                    ]
                 }
             ]
         });
