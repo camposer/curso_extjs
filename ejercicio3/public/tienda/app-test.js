@@ -7,11 +7,7 @@ Ext.application({
             'ProductoCtrl'
         ],
 
-        autoCreateViewport: false,
+        appFolder: './app',
 
-        launch: function() {
-            var jasmineEnv = jasmine.getEnv();
-            jasmineEnv.updateInterval = 1000;
-            jasmineEnv.execute();
-        }
+        autoCreateViewport: false
     });

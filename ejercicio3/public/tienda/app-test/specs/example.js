@@ -1,27 +1,30 @@
-describe("ProductoCtrl", function() {
-    var store = null, ctlr = null;
+// @see http://stackoverflow.com/questions/20119324/jasmine-2-0-rc-waits-is-not-defined
+Ext.onReady(function() {
+    var Application = Tienda.getApplication();
 
-    beforeEach(function(){
-        if (!ctlr) {
-            ctlr = Application.getController('ProductoCtrl');
-        }
+    describe("ProductoCtrl", function() {
+        var store = null, ctrl = null;
 
-        if (!store) {
-            store = ctlr.getStore('Productos');
-        }
+        beforeEach(function(done){
+            setTimeout(function() {
+                if (!ctrl) {
+                    ctrl = Application.getController('ProductoCtrl');
+                }
 
-        expect(store).toBeTruthy();
+                if (!store) {
+                    store = ctrl.getStore('Productos');
+                }
 
-        waitsFor(
-            function(){ return !store.isLoading(); 
-			},
-            "load never completed",
-            4000
-        );
+                expect(store).toBeTruthy();
+
+                if (!store.isLoading()) 
+                    done();
+            }, 1000);
+        });
+
+        it("Debería tener productos",function(done){
+            expect(store.getCount()).toBeGreaterThan(1);
+            done();
+        });
     });
-
-    it("Debería tener prodyctos",function(){
-        expect(store.getCount()).toBeGreaterThan(1);
-    });
-
 });
