@@ -11,6 +11,9 @@ Ext.define('Tienda.view.principal.Marco' ,{
         },
         {
             xtype: 'productoLista'
+        },
+        {
+            xtype: 'graficoTarta'
         }
     ]
 });

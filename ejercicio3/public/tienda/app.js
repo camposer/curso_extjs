@@ -17,7 +17,8 @@ Ext.application({
         'ProductoCtrl',
         'PrincipalCtrl',
         'CatalogoCtrl',
-        'CarritoCtrl'
+        'CarritoCtrl',
+        'GraficoCtrl'
     ],
 
     launch: function() { 
