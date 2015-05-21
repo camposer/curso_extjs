@@ -4,13 +4,16 @@ Ext.define('Tienda.view.carrito.Lista' ,{
 
     store: 'CarritoElementos',
     title: 'Carrito',
+    features: [{
+        ftype: 'summary'
+    }],
 
     initComponent: function() {
         this.columns = [
             {header: 'Nombre',  dataIndex: 'nombre',  flex: 1},
             {header: 'Precio', dataIndex: 'precio', flex: 1},
             {header: 'Cantidad', dataIndex: 'cantidad', flex: 1},
-            {header: 'Total', dataIndex: 'total', flex:1 }
+            {header: 'Total', dataIndex: 'total', flex:1, summaryType: 'sum' }
         ];
 
         this.tbar = [
