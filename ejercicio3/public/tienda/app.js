@@ -15,7 +15,9 @@ Ext.application({
     appFolder: 'app', 
     controllers: [ 
         'ProductoCtrl',
-        'PrincipalCtrl'
+        'PrincipalCtrl',
+        'CatalogoCtrl',
+        'CarritoCtrl'
     ],
 
     launch: function() { 

@@ -4,12 +4,10 @@ Ext.define('Tienda.view.principal.Marco' ,{
 
     items: [
         {
-            title: 'Catálogo',
-            html: 'Catálogo'
+            xtype: 'catalogoLista'
         },
         {
-            title: 'Carrito',
-            html: 'Carrito'
+            xtype: 'carritoLista'
         },
         {
             xtype: 'productoLista'

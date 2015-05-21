@@ -3,6 +3,6 @@ Ext.define('Tienda.controller.PrincipalCtrl', {
 
     views: [ 
     	'principal.Marco' 
-    ],
+    ]
 
 });
