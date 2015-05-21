@@ -11,12 +11,11 @@ Ext.define('Tienda.controller.CatalogoCtrl', {
             'catalogoLista button[action=agregar]': {
                 click: this.agregarProductos
             }
-        });        
+        }); 
     },
 
     buscarCarrito: function(id) {
-        var carritoElementos = 
-            this.getCarritoElementosStore().getRange();
+        var carritoElementos = this.getCarritoElementosStore().getRange();
 
         for (var i in carritoElementos) 
             if (carritoElementos[i].get('id') == id)
@@ -24,12 +23,7 @@ Ext.define('Tienda.controller.CatalogoCtrl', {
     },
 
     agregarProductos: function(button) {
-    	var catalogoElementos = 
-            this.getCatalogoElementosStore()
-            .getRange();
-
-        var carritoStore = 
-            this.getCarritoElementosStore();
+    	var catalogoElementos = this.getCatalogoElementosStore().getRange();
 
         for (var i in catalogoElementos) {
             var catalogo = catalogoElementos[i];
@@ -41,14 +35,14 @@ Ext.define('Tienda.controller.CatalogoCtrl', {
 
                 if (!carrito) {
                     carrito = Ext.create('Tienda.model.CarritoElemento', {
-                        id: catalogo.get('id'),
+                        productoId: catalogo.get('id'),
                         nombre: catalogo.get('nombre'),
                         precio: catalogo.get('precio'),
                         cantidad: catalogo.get('cantidad'),
                         total: total
                     });
 
-                    carritoStore.add(carrito);
+                    this.getCarritoElementosStore().add(carrito);
                 } else {
                     carrito.set('cantidad', 
                         carrito.get('cantidad') + catalogo.get('cantidad'));
@@ -58,6 +52,7 @@ Ext.define('Tienda.controller.CatalogoCtrl', {
             }
         }
 
-        carritoStore.sync();
+        console.log('sync carritoElementosStore');
+        this.getCarritoElementosStore().sync();
     }
 });
