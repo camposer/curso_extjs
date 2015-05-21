@@ -14,11 +14,11 @@ Ext.define('Tienda.controller.CatalogoCtrl', {
         }); 
     },
 
-    buscarCarrito: function(id) {
+    buscarCarrito: function(productoId) {
         var carritoElementos = this.getCarritoElementosStore().getRange();
 
         for (var i in carritoElementos) 
-            if (carritoElementos[i].get('id') == id)
+            if (carritoElementos[i].get('productoId') == productoId)
                 return carritoElementos[i];
     },
 
