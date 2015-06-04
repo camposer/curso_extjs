@@ -1,16 +1,35 @@
 Curso de Ext JS 4
 =================
 
+##Agenda
+
+- Arquitectura, propósito y alcance
+- Clases fundamentales
+- Implementación del patrón Modelo, Vista, Controlador (MVC)
+- Integración con AJAX
+- Contenedores y organizadores de Objetos
+- Componentes fundamentales
+- Arquitectura de acceso a datos
+- Internacionalización de aplicaciones
+- Testing
+
+##Método de enseñanza
+
+Por cada tema del curso:
+1. Teoría. Introducción teórica del tema utilizando las diapositivas, materiales e Internet
+2. Ejemplo. La teoría es reforzada con ejemplos del Instructor (carpeta basico)
+3. Ejercicios. Los participantes tienen un tiempo prudencial para la resolución de los ejercicios. Al finalizar este tiempo, el Instructor resuelve los ejercicios en clase y se someten a comentarios del curso. Las soluciones y enunciados pueden conseguirse dentro de las carpetas correspondientes
+
 ##Ext JS
 
 - Ext JS (descarga)
-	- http://www.sencha.com/products/extjs/download/ext-js-4.2.1/2281
+	- http://www.sencha.com/legal/gpl/
 - Ext JS (documentación)
 	- http://docs.sencha.com/extjs/4.2.3/
 - Ext JS Dynamic Loading Examples
 	- http://dev.sencha.com/deploy/LoaderDemo/
 
-##Enlaces
+##Misceláneos
 
 - Tutorial CSS
 	- http://tejedoresdelweb.com/w/CSS	
