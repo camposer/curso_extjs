@@ -7,7 +7,7 @@ Repasar los conceptos básicos de JavaScript, orientación a objetos, JSON, DOM,
 
 ##Actividades
 
-1. Cree una interfaz que permita gestionar Productos (CRUD+) para que funcione únicamente con JavaScript. Debe utilizar la clase ProductoUtil (ejercicio anterior). Los objetos dinámicos deben ser mostrados en pantalla con DOM.
+0. Cree una interfaz que permita gestionar Productos (CRUD+) para que funcione únicamente con JavaScript. Debe utilizar la clase ProductoUtil (ejercicio anterior). Los objetos dinámicos deben ser mostrados en pantalla con DOM.
 
 Orden sugerido de trabajo:
 - Listar productos
@@ -18,7 +18,7 @@ Orden sugerido de trabajo:
 
 NOTA: En el PDF adjunto (ejercicio2.pdf) podrá conseguir un mockup simple de la interfaz.
 
-2. Modifique la clase ProductoUtil y producto.html para que funcione con objetos simples (JSON).
+0. Modifique la clase ProductoUtil y producto.html para que funcione con objetos simples (JSON).
 Pista: quitar el archivo producto.js
 
 Esto:

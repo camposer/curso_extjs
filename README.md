@@ -16,9 +16,10 @@ Curso de Ext JS 4
 ##Método de enseñanza
 
 Por cada tema del curso:
-1. Teoría. Introducción teórica del tema utilizando las diapositivas, materiales e Internet
-2. Ejemplo. La teoría es reforzada con ejemplos del Instructor (carpeta basico)
-3. Ejercicios. Los participantes tienen un tiempo prudencial para la resolución de los ejercicios. Al finalizar este tiempo, el Instructor resuelve los ejercicios en clase y se someten a comentarios del curso. Las soluciones y enunciados pueden conseguirse dentro de las carpetas correspondientes
+
+0. Teoría. Introducción teórica del tema utilizando las diapositivas, materiales e Internet.
+0. Ejemplo. La teoría es reforzada con ejemplos del Instructor (carpeta basico).
+0. Ejercicios. Los participantes tienen un tiempo prudencial para la resolución de los ejercicios. Al finalizar este tiempo, el Instructor resuelve los ejercicios en clase y se someten a comentarios del curso. Las soluciones y enunciados pueden conseguirse dentro de las carpetas correspondientes.
 
 ##Ext JS
 

@@ -26,7 +26,7 @@ C:EJERCICIO3> node_64.exe app
 
 ###PARTE 1
 
-1. Refactorice el código de producto-jquery.html (ejercicio 2) para que ahora utilice la API Rest de /productos
+0. Refactorice el código de producto-jquery.html (ejercicio 2) para que ahora utilice la API Rest de /productos
 
 NOTA:
 - Los ficheros producto.html y sus JS deberá copiarlos dentro de la carpeta public/producto del ejercicio3
@@ -37,20 +37,20 @@ NOTA:
 ###PARTE 2
 
 0. Vea y comprenda el ejercicio account_manager (ejecutar, probar)
-1. Refactorice el código de am (Account Manager) que seguimos con el tutorial de Ext JS para que ahora haga las operaciones de Actualización (U) y Lectura (R) de Productos (utilizando el proxy REST).
-2. Refactorice el código de tienda para que ahora se puedan Agregar (C) y Eliminar (D) productos
+0. Refactorice el código de am (Account Manager) que seguimos con el tutorial de Ext JS para que ahora haga las operaciones de Actualización (U) y Lectura (R) de Productos (utilizando el proxy REST).
+0. Refactorice el código de tienda para que ahora se puedan Agregar (C) y Eliminar (D) productos
 2.1. Elimine múltiples filas en una sola operación
-3. Incluya validaciones al CRUD para que todos los productos tengan precio>0 (validación global) y nombres que contengan al menos 3 caracteres (validación local). Si los campos no son válidos no debería poder editar el producto!
+0. Incluya validaciones al CRUD para que todos los productos tengan precio>0 (validación global) y nombres que contengan al menos 3 caracteres (validación local). Si los campos no son válidos no debería poder editar el producto!
 Ver: Guides -> Component -> The Form Package
-4. Tienda. Ahora debe agregar las pantallas Inicio y Carrito, además del CRUD de producto que ya hicimos en el ejercicio anterior. Ver abajo:
+0. Tienda. Ahora debe agregar las pantallas Inicio y Carrito, además del CRUD de producto que ya hicimos en el ejercicio anterior. Ver abajo:
 Ver: Guides -> Layout Managers -> Layout Browser
-4.1. Cree una nueva vista principal con Layout (Card) y dentro de esta agregar las otras vistas, a saber: Inicio, Carrito y CRUD (listaproductos y edicionproducto). Para mantener el código simple puede mantener un sólo controlador
-4.2. Para la lógica de almacenamiento del carrito debe utilizar un proxy SessionStorage
+0.0. Cree una nueva vista principal con Layout (Card) y dentro de esta agregar las otras vistas, a saber: Inicio, Carrito y CRUD (listaproductos y edicionproducto). Para mantener el código simple puede mantener un sólo controlador
+0.0. Para la lógica de almacenamiento del carrito debe utilizar un proxy SessionStorage
 NOTA: 
 	- Primero implemente la parte visual y luego la parte funcional (SessionStore)
 	- Ver Guides -> Layout Managers -> Layout Browser
 	- Utilizar grids y para editar las cantidades el plugin CellEditing
-5. Registre las compras y muestre en el 3er tab un gráfico de tarta. Modelo del objeto a enviar:
+0. Registre las compras y muestre en el 3er tab un gráfico de tarta. Modelo del objeto a enviar:
 NOTA: No incluir ID (sino no reconoce que es un nuevo objeto)
 ```
 GET /compras
